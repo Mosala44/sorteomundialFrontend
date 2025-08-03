@@ -35,7 +35,7 @@ function App(){
         </div>
       </div>
       <div className="col-6 d-flex justify-content-center">
-        <button className="btn btn-danger display-2"><h2><strong>SORTEO</strong></h2></button>
+        <a className="btn btn-danger display-2" href= {"/grupos"}><h2><strong>SORTEO</strong></h2></a>
       </div>
     </div>
   </div>
