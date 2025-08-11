@@ -24,8 +24,8 @@ function Grupos() {
       <div className="container mt-5">
         <div className="row">
           {grupos && grupos.map((grupo, index) => (
-            <div key={index} className="col-md-3 mb-4"> {/* 4 columnas por fila en md (>=768px) */}
-              <div className="card h-100"> {/* h-100 para que todas las cards tengan igual altura */}
+            <div key={index} className="col-md-3 mb-4"> 
+              <div className="card h-100"> 
                 <div className="card-header">
                   Grupo {String.fromCharCode(65 + index)}
                 </div>
