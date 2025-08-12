@@ -10,6 +10,7 @@ import './index.css'
 import './index.css'
 import App from './App.jsx'
 import Grupos from './grupos.jsx';
+import Sorteos from './sorteos.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
       path: "/grupos",
       element: <Grupos />
+    },
+    {
+      path: "/sorteos",
+      element: <Sorteos />
     }
 ])
 

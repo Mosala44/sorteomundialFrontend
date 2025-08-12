@@ -35,7 +35,10 @@ function App(){
         </div>
       </div>
       <div className="col-6 d-flex justify-content-center">
-        <a className="btn btn-danger display-2" href= {"/grupos"}><h2><strong>SORTEO</strong></h2></a>
+        <a className="btn btn-danger display-2" href= {"/grupos"}>
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status"><h2>SORTEANDO...</h2></span>
+        </a>
       </div>
     </div>
   </div>
