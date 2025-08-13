@@ -12,6 +12,10 @@ import App from './App.jsx'
 import Grupos from './grupos.jsx';
 import Sorteos from './sorteos.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
 
 
 const router = createBrowserRouter([

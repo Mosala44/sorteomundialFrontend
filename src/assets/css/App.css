@@ -1,0 +1,69 @@
+.btnhome {
+  background-color: black;
+  color: white;
+  height: 140px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnhome a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.alertblanco {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.alertblanco .row-top {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.alertblanco .row-top span {
+  margin-right: 1rem;
+}
+
+.alertblanco .row-top a {
+  color: black;
+  font-size: 1.3rem;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+.carrusel-texto-boton {
+  position: absolute;
+  top: 10px;          
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;          
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px 15px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 10;         
+  user-select: none;   
+}
+
+.carrusel-texto-boton h1 {
+  font-size: 1.5rem;  
+  margin-bottom: 1rem;
+}
+
+.carrusel-texto-boton a.btn {
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}

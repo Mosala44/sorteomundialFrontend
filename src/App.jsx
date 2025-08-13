@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react';
+import pesstadium from './assets/img/pesstadium.jpg';
+import sorteo from './assets/img/sorteo.jpg';
+import './assets/css/App.css';
+
 
 function App(){
   const [paises, setPaises] = useState([]);
@@ -10,45 +14,76 @@ function App(){
       .catch(error => console.error('Error fetching countries:', error));
   }, []);
   return (
-<div>
-  <div className="alert alert-info display-1 text-center"><strong>SUPER MUNDIAL</strong></div>
-  <div className="container">
-    <div className="row">
-      <div className="col-6">
-        <div className="alert alert-info d-flex justify-content-center">
-          <table className="table-info w-auto">
-          <thead>
-            <tr>
-              <th scope="col">Edicion</th>
-              <th scope="col">Campeon</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paises.map((pais, index) => (
-              <tr key={pais.id || index}>
-                <th scope="row">{index + 1}</th>
-                <td>{pais.nombre}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div>
+      <div className="container-fluid">
+        <div className="row">
+          {/* Botón casa */}
+          <div className="btnhome col-2">
+            <a href="#">
+              <i className="bi bi-house-fill"></i>
+            </a>
+          </div>
+
+          {/* Contenedor blanco con contenido */}
+          <div className="alertblanco col-10">
+            <div className="row row-top d-none d-lg-flex">
+              <span>
+                <i className="bi bi-envelope-at-fill"></i> javiervarasbolados@gmail.com
+              </span>
+              <a href="#">
+                <i className="bi bi-github"></i>
+              </a>
+            </div>
+
+            <ul className="nav">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Bombos
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Campeones
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Paises
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="col-6 d-flex justify-content-center">
-        <a className="btn btn-danger display-2" href= {"/grupos"}>
-        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-        <span role="status"><h2>SORTEANDO...</h2></span>
-        </a>
+
+      <div id="carrusel" className="carousel slide">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={pesstadium} className="d-block w-100" alt="PES Stadium" />
+            <h1 className='carrusel-texto-boton'>HAZ CLICK EN EL BOTON "VER +" PARA VER EL HISTORIAL DE SORTEOS</h1> 
+            <div className='position-absolute top-50 start-50 translate-middle'>
+              <a href="" className='btn btn-warning'><h2><strong>VER +</strong></h2></a>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img src={sorteo} className="d-block w-100" alt="Sorteo" />
+            <div className='position-absolute top-50 start-50 translate-middle'>
+              <a href="" className='btn btn-danger'><h2><strong>SORTEO</strong></h2></a>
+            </div>
+          </div>
+        </div>
+      
+        <button className="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+      
+        <button className="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-  </div>
-  <footer className="text-center mt-5 text-muted">
-        <hr />
-        <p>creado por javier varas - @Mosala44</p>
-  </footer>
-</div>
-
-
   );
 }
 
